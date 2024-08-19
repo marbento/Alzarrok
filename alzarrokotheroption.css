@@ -25,16 +25,16 @@ h2, p {
 
 h2 {
     font-family: 'Arial', sans-serif;
-    font-weight: bold; /* Stronger weight for prominence */
-    font-size: 24px; /* Slightly larger for better visibility */
-    color: #333; /* Darker color for readability */
+    font-weight: bold;
+    font-size: 24px; 
+    color: #333; 
 }
 
 
 
 
 header {
-    text-align: center; /* Center all child elements horizontally */
+    text-align: center; 
     margin: 0;
     padding: 0;
 }
@@ -73,7 +73,7 @@ header {
 
 /* Hover effect for navigation items */
 .nav-item:hover {
-    background-color: rgba(38, 113, 199, 0.7); /* Slightly lighter on hover */
+    background-color: rgba(38, 113, 199, 0.7); 
 }
 
 
@@ -185,6 +185,7 @@ footer {
 }
 
 .finfo {
+    
     border: none;
     text-align: center; 
     width: 100%; 
@@ -206,4 +207,13 @@ footer {
 
 .finfo .text {
     color: white; 
+    font-size: 27px;
+}
+
+a:link {
+    color:white;
+}
+
+a:visited {
+    color:rgb(165, 163, 163);
 }
