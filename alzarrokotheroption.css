@@ -147,7 +147,7 @@ header {
 
     border: solid rgb(97, 156, 223);
     overflow: scroll;
-    width: 1000px;
+    width: auto;
     height: 500px;
     
 }
