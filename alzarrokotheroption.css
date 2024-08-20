@@ -156,8 +156,8 @@ header {
 }
 
 .boximages {
-    width:860px;
-    height: 420px;
+    width: auto;
+    height: auto;
 }
 
 /* Team Section */
