@@ -120,12 +120,22 @@ header {
 .infoparent {
     
     margin-top: 0px;
-    width:100%;
+  
+    width: 80%;
+    height: auto;
+    margin: auto;
     
     text-align: center;
 
-    display: flex;
-    justify-content: space-between;   
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    
+      
 }
 
 .info {
@@ -133,16 +143,21 @@ header {
     font-weight: 20;
     font-size: 15px;
     
+    
 
     border: solid rgb(97, 156, 223);
     overflow: scroll;
-    width: 700px;
+    width: 100%;
     height: 500px;
+    
+}
+.info a:link {
+    color: blue;
 }
 
 .boximages {
-    width: 450px;
-    height: 350px;
+    width:860px;
+    height: 420px;
 }
 
 /* Team Section */
@@ -164,7 +179,7 @@ header {
 }
 
 .teamimage {
-    width: 100%;
+    width: 800px;
     max-width: 700px;
     height: auto;
     object-fit: cover; /* Ensures the image covers the given dimensions */
@@ -210,10 +225,10 @@ footer {
     font-size: 27px;
 }
 
-a:link {
+.finfo a:link {
     color:white;
 }
 
-a:visited {
+.finfo a:visited {
     color:rgb(165, 163, 163);
 }
