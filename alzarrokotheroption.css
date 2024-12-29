@@ -6,8 +6,8 @@
 }
 
 :root {
-    --primary-color: rgba(97, 156, 233, 0.8);
-    --secondary-color: rgba(38, 113, 199, 0.9);
+    --primary-color: #161d28;
+    --secondary-color: #1786ff;
     --hover-color: rgba(38, 113, 199, 0.7);
     --text-color: #333;
     --background-color: rgb(247, 247, 247);
@@ -15,7 +15,7 @@
 }
 
 html {
-    background-image: url('./images/backgroundim.png');
+    background-color: #161d28;
     background-size: cover; /* Ensure the image covers the entire background */
     background-repeat: no-repeat; /* Prevent tiling of the image */
     background-position: center; /* Center the background image */
@@ -52,24 +52,25 @@ header {
     animation: fadeIn 1.5s ease-out; /* Add fade-in animation */
 }
 
+
+
 /* Logo container styling */
 .logo-container {
-    margin-bottom: 20px; /* Add space between the logo and other elements */
+    margin-top: 0px;
+    margin-bottom: 0px; /* Add space between the logo and other elements */
     text-align: center; /* Center the logo container */
-    padding: 10px; /* Add padding to the container */
+    padding: 0px; /* Add padding to the container */
 }
 
 
 /* Logo styling */
 #logo {
-    width: 250px;
+    width: 1220px;
     height: auto; 
-    background-color: white; /* Add a white background for contrast */
-    padding: 10px; /* Add padding to create space around the logo */
-    border-radius: 8px; /* Optionally, add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    padding: 0px; /* Add padding to create space around the logo */
     display: block; /* Ensure the logo is treated as a block-level element */
     margin: 0 auto; /* Center the logo horizontally */
+    animation: slideInFromTop 1.5s ease-out; /* Add slide-in animation */
 }
 
 
@@ -114,12 +115,13 @@ header {
     padding: 20px;
     max-width: 800px; /* Center the content and limit the width */
     font-family: var(--font-family);
-    background-color: var(--primary-color);
-    border: solid var(--primary-color);
+    background-color: #1786ff;
+    border: #1786ff;
     text-align: center;
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    animation: fadeIn 2s ease-out;
+    animation: slideInFromTop 2s ease-out;
+
 }
 
 .intro img {
@@ -134,7 +136,7 @@ header {
     font-weight: lighter;
     font-size: 18px;
     line-height: 1.6; /* Improved readability */
-    color: var(--text-color); 
+    color: #161d28; 
 }
 
 .header {
@@ -167,16 +169,16 @@ header {
     border: solid var(--primary-color);
     overflow: auto;
     width: auto;
-    height: 500px;
+    height: 300px;
     padding: 10px;
     opacity: 0;
     animation: fadeIn 2s ease-in forwards;
     animation-delay: 1s;
-    background-color: white;
+    background-color: #1786ff;
 }
 
 .info a:link {
-    color: blue;
+    color: #161d28;
 }
 
 .info a:focus {
@@ -208,12 +210,12 @@ header {
 }
 
 .abtteam {
-    background-color: var(--primary-color);
+    background-color: #1786ff;
     text-align: center;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 2s ease-out;
+    animation: slideInFromTop 2s ease-out;
 }
 
 .teamimage {
@@ -255,7 +257,7 @@ footer {
 .text {
     font-size: 16px;
     line-height: 1.5;
-    color: #333;
+    color: white;
 }
 
 /* Keyframes for animations */
