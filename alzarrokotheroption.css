@@ -60,12 +60,13 @@ header {
     margin-bottom: 0px; /* Add space between the logo and other elements */
     text-align: center; /* Center the logo container */
     padding: 0px; /* Add padding to the container */
+    background-color: #1786ff;
 }
 
 
 /* Logo styling */
 #logo {
-    width: 1220px;
+    width: fit-content;
     height: auto; 
     padding: 0px; /* Add padding to create space around the logo */
     display: block; /* Ensure the logo is treated as a block-level element */
