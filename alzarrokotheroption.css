@@ -1,10 +1,25 @@
+/* Global Reset */
 * {
     box-sizing: border-box; /* Include padding and border in element's width and height */
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --primary-color: rgba(97, 156, 233, 0.8);
+    --secondary-color: rgba(38, 113, 199, 0.9);
+    --hover-color: rgba(38, 113, 199, 0.7);
+    --text-color: #333;
+    --background-color: rgb(247, 247, 247);
+    --font-family: 'Arial', sans-serif;
+}
+
 html {
-    background-color: rgb(247, 247, 247);
+    background-image: url('./images/backgroundim.png');
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-repeat: no-repeat; /* Prevent tiling of the image */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; 
 }
 
 header, 
@@ -24,31 +39,39 @@ h2, p {
 }
 
 h2 {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--font-family);
     font-weight: bold;
     font-size: 24px; 
-    color: #333; 
+    color: var(--text-color); 
 }
-
-
-
 
 header {
     text-align: center; 
     margin: 0;
     padding: 0;
+    animation: fadeIn 1.5s ease-out; /* Add fade-in animation */
 }
 
 /* Logo container styling */
 .logo-container {
-    margin-bottom: 10px; /* Space between logo and navigation */
+    margin-bottom: 20px; /* Add space between the logo and other elements */
+    text-align: center; /* Center the logo container */
+    padding: 10px; /* Add padding to the container */
 }
+
 
 /* Logo styling */
 #logo {
     width: 250px;
     height: auto; 
+    background-color: white; /* Add a white background for contrast */
+    padding: 10px; /* Add padding to create space around the logo */
+    border-radius: 8px; /* Optionally, add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    display: block; /* Ensure the logo is treated as a block-level element */
+    margin: 0 auto; /* Center the logo horizontally */
 }
+
 
 /* Navbar styling */
 .navbar {
@@ -57,41 +80,46 @@ header {
     align-items: center;
     height: 60px;
     padding: 0 20px; 
-    background-color: rgba(97, 156, 233, 0.8);
+    background-color: var(--primary-color);
+    animation: fadeIn 2s ease-in;
 }
 
 /* Navigation item styling */
 .nav-item {
     margin: 0 10px; 
-    background-color: rgba(38, 113, 199, 0.9);
+    background-color: var(--secondary-color);
     padding: 10px 15px;
     border-radius: 15px;
     color: white;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+    animation-delay: 0.5s;
 }
 
 /* Hover effect for navigation items */
 .nav-item:hover {
-    background-color: rgba(38, 113, 199, 0.7); 
+    background-color: var(--hover-color); 
 }
 
-
-
-
-
+.nav-item:focus {
+    outline: 2px dashed white;
+    outline-offset: 4px;
+}
 
 /* Opener Section */
 .opener {
     margin: 65px auto;
     padding: 20px;
     max-width: 800px; /* Center the content and limit the width */
-    font-family: 'Arial', sans-serif;
-    background-color: rgba(97, 156, 233, 0.7);
-    border: solid rgba(97, 156, 233, 0.7);
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    border: solid var(--primary-color);
     text-align: center;
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    animation: fadeIn 2s ease-out;
 }
 
 .intro img {
@@ -106,7 +134,7 @@ header {
     font-weight: lighter;
     font-size: 18px;
     line-height: 1.6; /* Improved readability */
-    color: #333; 
+    color: var(--text-color); 
 }
 
 .header {
@@ -114,50 +142,58 @@ header {
     font-size: 28px;
     margin-bottom: 20px;
     color: #222; 
+    animation: fadeIn 2s ease-out;
 }
 
 /* Info Section */
 .infoparent {
-    
-    margin-top: 0px;
-  
+    margin-top: 20px;
     width: 80%;
     height: auto;
     margin: auto;
-    
     text-align: center;
-
     display: grid;
     justify-content: center;
     align-items: center;
     place-content: center;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    
-      
+    gap: 20px;
+    animation: slideInFromBottom 1.5s ease-out;
 }
 
 .info {
-    font-family: 'Arial';
-    font-weight: 20;
+    font-family: var(--font-family);
     font-size: 15px;
-    
-    
-
-    border: solid rgb(97, 156, 223);
-    overflow: scroll;
+    border: solid var(--primary-color);
+    overflow: auto;
     width: auto;
     height: 500px;
-    
+    padding: 10px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+    animation-delay: 1s;
+    background-color: white;
 }
+
 .info a:link {
     color: blue;
+}
+
+.info a:focus {
+    outline: 2px dashed blue;
+    outline-offset: 4px;
 }
 
 .boximages {
     width: 85%;
     height: auto;
+}
+
+/* Responsive Design for Info Section */
+@media (max-width: 768px) {
+    .infoparent {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Team Section */
@@ -168,14 +204,16 @@ header {
     height: 100vh;
     background-color: #f4f4f4; 
     padding: 20px;
+    animation: slideInFromLeft 1.5s ease-out;
 }
 
 .abtteam {
-    background-color: rgba(97, 156, 233, 0.7);
+    background-color: var(--primary-color);
     text-align: center;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-out;
 }
 
 .teamimage {
@@ -197,10 +235,10 @@ footer {
     align-items: center; 
     background-color: #333; 
     color: white; 
+    animation: fadeIn 2s ease-in;
 }
 
 .finfo {
-    
     border: none;
     text-align: center; 
     width: 100%; 
@@ -220,15 +258,45 @@ footer {
     color: #333;
 }
 
-.finfo .text {
-    color: white; 
-    font-size: 27px;
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.finfo a:link {
-    color:white;
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-.finfo a:visited {
-    color:rgb(165, 163, 163);
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
