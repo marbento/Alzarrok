@@ -82,22 +82,22 @@ header {
     align-items: center;
     height: 60px;
     padding: 0 20px; 
-    background-color: var(--primary-color);
+    background-color: #161d28;
     animation: fadeIn 2s ease-in;
 }
 
 /* Navigation item styling */
 .nav-item {
     margin: 0 10px; 
-    background-color: var(--secondary-color);
+    background-color: #1786ff;
     padding: 10px 15px;
     border-radius: 15px;
     color: white;
     text-decoration: none;
     transition: background-color 0.3s ease;
     opacity: 0;
-    animation: fadeIn 2s ease-in forwards;
-    animation-delay: 0.5s;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.2s;
 }
 
 /* Hover effect for navigation items */
@@ -106,7 +106,7 @@ header {
 }
 
 .nav-item:focus {
-    outline: 2px dashed white;
+    outline: 2px ridge white;
     outline-offset: 4px;
 }
 
@@ -236,8 +236,8 @@ footer {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    background-color: #333; 
-    color: white; 
+    background-color: #1786ff; 
+    color: #161d28; 
     animation: fadeIn 2s ease-in;
 }
 
@@ -252,7 +252,18 @@ footer {
 .publications {
     margin-bottom: 10px; 
     font-size: 22px;
-    color: white;
+    color: #161d28;
+}
+
+footer a:link {
+    color: #ffffff;
+
+}
+footer a:visited {
+    color: #161d28;
+}
+footer a:hover {
+    color: blue;
 }
 
 .text {
