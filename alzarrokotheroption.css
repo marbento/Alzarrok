@@ -263,7 +263,7 @@ footer a:visited {
     color: #161d28;
 }
 footer a:hover {
-    color: var(--hover-color);
+    color: wheat;
 }
 
 .text {
