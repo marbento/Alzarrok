@@ -97,7 +97,7 @@ header {
     transition: background-color 0.3s ease;
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
-    animation-delay: 0.2s;
+    animation-delay: 0s;
 }
 
 /* Hover effect for navigation items */
@@ -150,32 +150,31 @@ header {
 
 /* Info Section */
 .infoparent {
-    margin-top: 20px;
-    width: 80%;
-    height: auto;
-    margin: auto;
-    text-align: center;
-    display: grid;
     justify-content: center;
     align-items: center;
-    place-content: center;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    animation: slideInFromBottom 1.5s ease-out;
+    height: 100vh;
+    background-color: #161d28; 
+    padding: 20px;
+    animation: slideInFromTop 1.5s ease-out;
+    margin-bottom: 0px;
 }
 
 .info {
-    font-family: var(--font-family);
-    font-size: 15px;
-    border: solid var(--primary-color);
-    overflow: auto;
-    width: auto;
-    height: 300px;
-    padding: 10px;
-    opacity: 0;
-    animation: fadeIn 2s ease-in forwards;
-    animation-delay: 1s;
+    display: block; 
     background-color: #1786ff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideInFromTop 2s ease-out;
+    width: 80%;
+    margin: auto;
+}
+
+.boximages:hover
+{
+    animation: expand 0.5s ease-in-out;
+    transform: scale(1.2);
 }
 
 .info a:link {
@@ -201,7 +200,7 @@ header {
 
 /* Team Section */
 .team {
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -211,12 +210,48 @@ header {
 }
 
 .abtteam {
+    display: block; 
+    
+
     background-color: #1786ff;
     text-align: center;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: slideInFromTop 2s ease-out;
+    width: 80%;
+    margin: auto;
+
+    
+}
+
+.button-container {
+    background-color: #161d28;
+    width: 700px;
+    border-radius: 15px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.button
+{
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 10px; 
+    background-color: #161d28;
+    padding: 10px 15px;
+    
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0s;
+}
+.button:hover {
+    background-color: #303f57; 
 }
 
 .teamimage {
@@ -231,7 +266,7 @@ header {
 
 /* Footer */
 footer {
-    margin-top: 40px;
+    margin-top: 0px;
     padding: 20px;
     display: flex;
     justify-content: center; 
@@ -312,5 +347,17 @@ footer a:hover {
     to {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+@keyframes expand
+{
+    from
+    {
+        transform: scale(1);
+    }
+    to
+    {
+        transform: scale(1.2);
     }
 }

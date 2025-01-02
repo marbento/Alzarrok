@@ -24,9 +24,27 @@
 
   <section class="Team">
     <div class="abtteam">
-      <h2>The Team</h2> <br>
-    <img src="./images/theteam.jpeg" class="teamimage" alt="The Team">
+      
+      <div class="button-container">
+      <button class="button" onClick="CompanyImage()"> The Company</button>
+      <button class="button" onClick="TeamImage()" > The Team</button>
+      <button class="button" onClick="FundingImage()"> Funding </button>
+      </div>
+    <img src="./images/thecompany.jpeg" class="teamimage" alt="The Team">
     </div>
+
+    <script>
+      function CompanyImage(){
+        document.querySelector(".teamimage").src = "./images/thecompany.jpeg";
+      }
+      function TeamImage(){
+        document.querySelector(".teamimage").src = "./images/theteam.jpeg";
+      }
+      function FundingImage(){
+        document.querySelector(".teamimage").src = "./images/thefunding.jpeg";
+      }
+    </script>
+
     </section>
 
 </main>
