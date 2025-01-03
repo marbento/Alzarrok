@@ -152,30 +152,31 @@ header {
 .infoparent {
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #161d28; 
+    height: auto;
+    background-color: #1786ff; 
     padding: 20px;
     animation: slideInFromTop 1.5s ease-out;
     margin-bottom: 0px;
+    margin-top: 5%;
 }
 
-.info {
+/*.info {
     display: block; 
-    background-color: #1786ff;
     text-align: center;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: slideInFromTop 2s ease-out;
-    width: 80%;
-    margin: auto;
-}
+    width: 100%;
+    margin: 0, 0, 0, 0;
+    background-color: #1787ff00;
+}*/
 
-.boximages:hover
+/*.boximages:hover
 {
     animation: expand 0.5s ease-in-out;
     transform: scale(1.2);
-}
+}*/
 
 .info a:link {
     color: #161d28;
@@ -187,8 +188,12 @@ header {
 }
 
 .boximages {
-    width: 85%;
+    width: 90%;
     height: auto;
+    object-fit: cover; /* Ensures the image covers the given dimensions */
+    border-radius: 8px; 
+    margin: 0 auto; /* Center the image horizontally within its block-level container */
+    display: block; 
 }
 
 /* Responsive Design for Info Section */
@@ -199,41 +204,45 @@ header {
 }
 
 /* Team Section */
-.team {
+.teamparent {
     
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4; 
+    height: auto;
+    background-color: #1786ff;
+    width: 100%; 
     padding: 20px;
-    animation: slideInFromLeft 1.5s ease-out;
+    animation: slideInFromTop 1.5s ease-out;
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
 
-.abtteam {
+/*.abtteam {
     display: block; 
-    
+    width: 100%;
 
-    background-color: #1786ff;
+    background-color: #1787ff00;
     text-align: center;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: slideInFromTop 2s ease-out;
-    width: 80%;
+    
     margin: auto;
 
     
-}
+} */
 
 .button-container {
     background-color: #161d28;
     width: 700px;
-    border-radius: 15px;
+    border-radius: 5px;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    width: 90%;
 }
 .button
 {
@@ -255,8 +264,7 @@ header {
 }
 
 .teamimage {
-    width: 800px;
-    max-width: 700px;
+    width: 90%;
     height: auto;
     object-fit: cover; /* Ensures the image covers the given dimensions */
     border-radius: 8px; 
@@ -266,7 +274,7 @@ header {
 
 /* Footer */
 footer {
-    margin-top: 0px;
+    margin-top: 70px;
     padding: 20px;
     display: flex;
     justify-content: center; 
