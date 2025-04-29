@@ -188,7 +188,7 @@ header {
 }
 
 .boximages {
-    width: 90%;
+    width: 85%;
     height: auto;
     object-fit: cover; /* Ensures the image covers the given dimensions */
     border-radius: 8px; 
@@ -235,14 +235,14 @@ header {
 
 .button-container {
     background-color: #161d28;
-    width: 700px;
+    width: 85%;
     border-radius: 5px;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    width: 90%;
+   
 }
 .button
 {
